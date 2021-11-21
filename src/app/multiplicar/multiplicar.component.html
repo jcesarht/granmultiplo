@@ -1,0 +1,90 @@
+<div id="div_formulario"  align="center">
+	<div class="{{estado}}">{{mensaje}}</div>
+	<div style="float:left">
+		<form [formGroup]="form" (ngSubmit)="enviar($event)">
+				  <p>
+				    <input class="form-control" type="text" formControlName="multiplicando" placeholder="Multiplicando">
+				  </p>
+				  <p>
+				     
+				    <input type="text" formControlName="multiplicador" placeholder="Multiplicador">
+				  </p>				    
+				  
+				  <div><strong>{{resultado}}</strong></div>
+				  <br>
+				  <button type="submit">Multiplicar</button>  
+				  <button  type="submit" (click)="resetCalc()">Reset</button>
+				</form>
+	</div>
+	<div style="float: left;" class="div-panel-historial">
+		<button  type="submit" (click)="borrarTodo()">Borrar Historial</button><br><br> 
+				
+				<div class="div-historial" *ngFor="let h of historial">
+					<strong>{{h.multiplicando}} <font size="+1" color="#DD0031">x</font> {{h.multiplicador}} <font size="+1" color="#DD0031">=</font> 
+					{{h.producto}}</strong>
+				</div>
+	</div>
+	<div>
+		<h3>3. Algoritmo para Elevar Exponencialmente Solo Sumando</h3>
+		<div align="left">
+			<pre>
+			<code>
+			Inicia <br>
+			entero base = 0; <br>
+			entero exponente = 0;<br>
+			entero resultado = 0;<br>
+			entero resultado_temp = base;<br>
+			entero iterador = 1;<br>
+			entero interador2 = 0;<br>
+			leer(base);<br>
+			leer(exponente);<br>
+			while(iterador < exponente ){{'{'}}<br>
+				iterador2 = 1;<br>
+				resultado = 0;<br>
+				while(iterador2 <= base){{'{'}}<br>
+					resultado =  resultado_temp + resultado;<br>
+					iterador2 = iterador2 +1;<br>
+				{{'}'}}<br>
+				resultado_temp = resultado;<br>
+				iterador = iterador +1;<br>
+			{{'}'}}<br>
+			imprimir (resultado);<br>
+			fin
+			</code>
+		</pre>
+		</div>
+	</div>
+	<!--
+	<table width="500px">
+		<tr>
+			<td width="40%" valign="top">
+				<form [formGroup]="form" (ngSubmit)="enviar($event)">
+				  <p>
+				    <input type="text" formControlName="multiplicando" placeholder="Multiplicando">
+				  </p>
+				  <p>
+				     
+				    <input type="text" formControlName="multiplicador" placeholder="Multiplicador">
+				  </p>				    
+				  
+				  <div><strong>{{resultado}}</strong></div>
+				  <br>
+				  <button type="submit">Multiplicar</button> 
+				</form>			
+			</td>
+			<td id="td_historial" width="60%" valign="top">
+				
+				  
+				<button type="submit" (click)="borrarTodo()">Borrar Historial</button> 
+				
+				<div *ngFor="let h of historial">
+					<strong>{{h.multiplicando}} x
+					{{h.multiplicador}} = 
+					{{h.producto}}</strong>
+				</div>
+			</td>
+		</tr>
+	</table>
+	-->
+	
+</div>

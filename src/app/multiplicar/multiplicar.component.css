@@ -1,0 +1,25 @@
+.estado-success{
+	color: #8FEA09;
+}
+.estado-error{
+	color: #C70039;
+}
+.div-historial{
+
+	float: left;
+	background: -webkit-linear-gradient(white,#1976D2); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(white,#1976D2); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(white,#1976D2); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(white,#1976D2); /* Standard syntax */
+	padding: 1px 1px;
+	width: 100%;
+}
+.div-panel-historial{
+	margin: 10px 10px;
+	height: 300px;
+	width: 400px;
+	border: 1px solid #ddd;
+	background: #f1f1f1;
+	overflow: auto;
+	padding: 10px 10px;
+}
